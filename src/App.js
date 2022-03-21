@@ -31,15 +31,15 @@ function App() {
                   disabled={pokemon.previous === null}
                   onClick={() => setEndpoint(pokemon.previous)}
               >
-                  Previous
+                  Vorige
               </button>
               <button
                   type="button"
                   onClick={() => setEndpoint(pokemon.next)}
               >
-                  Next
+                  Volgende
               </button>
-              <div className="pokemon-box">
+              <div>
                   {pokemon &&
                   pokemon.results.map((pokemonCard) => {
                       return <Pokemon key={pokemonCard.name} endpoint={pokemonCard.url}/>

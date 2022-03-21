@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
+import './Pokemon.css';
 
 const Pokemon = ({endpoint}) => {
     const [pokemon, setPokemon] = useState('');
@@ -18,10 +19,10 @@ const Pokemon = ({endpoint}) => {
     },[]);
 
     return (
-        <div>
+        <div className="pokemon-box">
             {pokemon &&
             <>
-                <h3>{pokemon.name}</h3>
+                <h2>{pokemon.name}</h2>
                 <img src={pokemon.sprites.front_default} alt={`The pokemon ${pokemon.name}`}/>
                 <p><strong>Moves:</strong> {pokemon.moves.length}</p>
                 <p><strong>Weight:</strong> {pokemon.weight}</p>
