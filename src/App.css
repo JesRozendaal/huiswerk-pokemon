@@ -1,0 +1,11 @@
+button {
+    background-color: blue;
+    color: white;
+    border-color: hsl(53, 100%, 50%);
+}
+
+button:disabled {
+    background-color: lightblue;
+    color: lightgray;
+    border-color: hsl(53, 100%, 50%);
+}
